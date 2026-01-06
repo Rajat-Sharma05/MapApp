@@ -1,6 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        
+
 
     <application
       android:name=".MainApplication"
@@ -11,6 +15,12 @@
       android:theme="@style/AppTheme"
       android:usesCleartextTraffic="${usesCleartextTraffic}"
       android:supportsRtl="true">
+      <meta-data
+    android:name="com.mapbox.token"
+    android:value="sk.eyJ1IjoibjRrZXhlIiwiYSI6ImNtMzN2MWVqdTA0OXUya282bnBhMTRyc3AifQ.6DjXEhyhD4t-65gDMlkVcQ" />
+    <meta-data
+  android:name="com.google.android.gms.client_id"
+  android:value="@string/default_web_client_id" />
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
@@ -23,5 +33,7 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+      <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+   	<meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
     </application>
 </manifest>
